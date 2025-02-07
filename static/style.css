@@ -1,0 +1,53 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin-top: 50px;
+    background-color: #ffebee;
+}
+
+h1 {
+    color: #d32f2f;
+}
+
+button {
+    font-size: 20px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+#yes-btn {
+    background-color: #4caf50;
+    color: white;
+    margin-right: 20px; /* Spacing between buttons */
+}
+
+#no-btn {
+    background-color: #d32f2f;
+    color: white;
+    position: absolute;
+}
+
+#message {
+    font-size: 18px;
+    color: #d32f2f;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#gif-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    min-height: 150px; /* Ensures GIF area exists */
+}
+
+#gif-container img {
+    max-width: 300px;
+    height: auto;
+}
