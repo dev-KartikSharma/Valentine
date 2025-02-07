@@ -6,10 +6,10 @@ let size = 20;
 
 let messages = [
     "Are you sure? 💔 Because my heart beats only for you! ❤️",
-    "Sochlo Ache se ek baar!!",
+    "Soch le ache se ek baar!!",
     "Every time you say no, a puppy somewhere cries... 🐶😭",
     "I'll keep asking until you say yes! 😘",
-    "You must be an angel, because you've stolen my heart! 😍",
+    "Manja na! Kitna bhav khaegi 😭",
     "Even Google couldn't find someone better for me than you! 💕",
     "No? I'll wait... forever if I have to! ⏳❤️",
     "The stars shine only for you! 🌟 Say yes, please!",
@@ -25,8 +25,6 @@ const gifs = [
     "/static/gifs/boba.gif"
 ];
 
-let yesGif = "https://media.tenor.com/-dzzMJJ-xnIAAAAM/cat-eku-eku.gif"; // Happy "YES" GIF
-
 let index = 0;
 
 function increaseYesSize() {
@@ -38,8 +36,8 @@ function increaseYesSize() {
     // Change message
     message.innerText = messages[index];
 
-    // Show GIFs properly
-    gifContainer.innerHTML = `<img src="${gifs[index]}" alt="GIF">`;
+    // Change GIF
+    gifContainer.innerHTML = `<img src="${gifs[index]}" width="300px" alt="GIF">`;
 
     index = (index + 1) % gifs.length; 
 
@@ -51,11 +49,9 @@ function increaseYesSize() {
     noButton.style.top = y + "px";
 }
 
-// When she clicks YES, show the celebration GIF
+// When she clicks YES, redirect to the new page
 yesButton.onclick = function() {
-    message.innerText = "Yay! You said YES! ❤️";
-    gifContainer.innerHTML = `<img src="${yesGif}" alt="Happy">`;
-    noButton.style.display = "none"; // Hide the "No" button
+    window.location.href = "/yes";  // Redirect to the new page
 };
 
 noButton.onclick = increaseYesSize;
